@@ -1,8 +1,11 @@
 #Ignora i file contenenti informazioni personali
 presentation/
 
+#Ignora i file di configurazione
+*.cfg
+
 #Ingora le librerie dell'ambiente virtuale in python
 spider/bin/
 spider/include/
 spider/lib/
-spider/lib64/
+spider/lib64
