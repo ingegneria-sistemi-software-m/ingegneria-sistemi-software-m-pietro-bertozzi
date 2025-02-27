@@ -84,42 +84,24 @@
 </div>
 <h2>Requirements</h2>
 <div class="remark">
-	<ul>
-		<li>Analisi del problema ConwayLife25 una GUI per Java.</li>
-		<li>Proposta di un progetto e dei tempi previsti per la sua realizzazione.</li>
-	</ul>
+	Refactoring di ConwayLife25 in Java per introdurre una rappresentazione esplicita di Cell e Grid come classi Java.
 </div>
 <h2>Requirement analysis</h2>
 <div class="remark">
-	Requisiti Funzionali
-	<ul>
-		<li>Deve essere possibile modificare lo stato delle celle, anche durante la simulazione.</li>
-		<li>Deve essere possibile avviare una simulazine e, successivamente, fermarla.</li>
-		<li>Deve essere possibile impostare tutte le celle comme morte.</li>
-		<li>La matrice deve essere sufficientemente grande; non meno di 6x6.</li>
-	</ul>
-	Requisiti non Funzionali
-	<ul>
-		<li>Si potrebbero aggiungere la possibilità di salvare lo stato e quella di caricarlo.</li>
-		<li>Si potrebbe aggiungere la possibilità di modificare la velocità di simulazione.</li>
-		<li>Si potrebbe aggiungere la possibilità di ridimensionare la matrice.</li>
-	</ul>
+	I requisiti non cambiano rispetto alla versione precedenete: è semplicemente un refactoring.
 </div>
 <h2>Problem analysis</h2>
-	<div class="remark">
-		Ecco un elenco di alcuni punti di vista su cui riflettere prima di progettare.
-		<ul>
-			<li>Interazione: l’utente deve poter modificare la griglia senza interferire con la simulazione in corso, richiedendo una gestione attenta degli eventi.</li>
-			<li>Rendering: l’interfaccia deve ridisegnare la griglia a ogni generazione senza rallentamenti o flickering, gestendo correttamente il ciclo di aggiornamento.</li>
-			<li>Spazio: una griglia infinita non è realizzabile direttamente, quindi bisogna scegliere tra griglie toroidali, dinamiche o con confini fissi, o forse si possono rilassare le regole del gioco.</li>
-			<li>Salvataggio/Caricamento: occorre un formato per memorizzare stati della simulazione e ricaricarli, garantendo compatibilità e facilità d’uso.</li>
-			<li>Velocità: l’utente potrebbe voler impostare velocità personalizzate, avanzamento manuale o modificare le regole del gioco, aggiungendo complessità gestionale.</li>
-			<li>Scalabilità: con molte celle attive, il numero di operazioni per ogni aggiornamento cresce, quindi servono ottimizzazioni per evitare cali di performance.</li>
-			<li>Navigazione: se la griglia è ampia, l’utente potrebbe aver bisogno di strumenti per ingrandire o spostarsi nella visualizzazione.</li>
-		</ul>
-	</div>
+<div class="remark">
+	Dobbiamo riflettere sul rapporto tra la griglia e le celle.
+	Forse le celle sono semplicemente parti della griglia o forse hanno una loro indipendenza e conseguente responsabilità.
+</div>
 <h2>Test plans</h2>
 <h2>Project</h2>
+<div class="remark">
+	In futuro potremmo voler implementare il gioco in distribuito, con una sola cella per monitor.
+	Tenendo questo a mente, è più corretto progettare le celle come classi indipendenti.
+	In ingegneria del SW di questa relazione si indica col termine aggregazione (contrapposta alla composizione).
+</div>
 <h2>Testing</h2> 
 <h2>Deployment</h2>
 <h2>Maintenance</h2> 
