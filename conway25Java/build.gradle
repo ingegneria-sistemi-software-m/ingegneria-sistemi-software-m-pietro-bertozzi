@@ -53,7 +53,6 @@ application {
     mainClassName    = "conway.MainConway"
 }
 
-
 /*
 Eclipse potrebbe aver configurato la directory src come una directory sorgente nel build path del progetto.
 Questo può accadere se il progetto è stato importato in Eclipse prima di essere configurato correttamente come progetto Gradle.

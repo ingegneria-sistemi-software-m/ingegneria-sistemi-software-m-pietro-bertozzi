@@ -1,72 +1,74 @@
 package conway;
 
+import java.util.Arrays;
+
 public class Grid {
-	private int rows=0;
-    private int cols=0;
-    
-	private Cell[][] grid;
+	private Cell[][] cells;
 	
-	public Grid(int rows, int cols) {
-		this.rows = rows;
-		this.cols = cols;
-		this.grid = new Cell[rows][cols];
-		
-		for (int i=0; i<this.rows; i++) {
-            for (int j=0; j<this.cols; j++) {
-            	this.grid[i][j] = new Cell(false);
-            }
-		} 
-	}
-	
-    protected void resetGrid() {
-    	for (int i=0; i<this.rows; i++) {
-            for (int j=0; j<this.cols; j++) {
-            	this.grid[i][j].setVita(false);
-            }
-		}
+	public Grid() {
+        this(3, 3);
     }
-    
-    public void displayGrid(IOutDev outdev) {
-		for (int i = 0; i < this.rows; i++) {
-			for (int j = 0; j < this.cols; j++) {
-				if (this.grid[i][j].isVita() == false) {
-					outdev.displayCell("0");
-                } else {
-                	outdev.displayCell("1");
-                }				 
-			}
-			outdev.displayCell("\n");
-		}
-	}
-    
-    public void switchCellState(int i, int j){
-        if( this.grid[i][j].isVita() == true )
-        	this.grid[i][j].setVita(false);
-        else
-        	this.grid[i][j].setVita(true);
+    public Grid(int rows, int cols) {
+        this.cells= new Cell[rows][cols];
+        for (int i = 0; i < this.getRows(); i++) {
+            for (int j = 0; j < this.getCols(); j++) {
+                this.cells[i][j] = new Cell(false);
+            }
+        }
     }
     
     public void setCellState(int i, int j, boolean state) {
-        this.grid[i][j].setVita(state);
+        this.cells[i][j].setAlive(state);
+    }
+    public void switchCellState(int i, int j){
+    	this.cells[i][j].switchAlive();
+    }
+    public void resetGrid() {
+    	for (int i = 0; i < this.getRows(); i++) {
+            for (int j = 0; j < this.getCols(); j++) {
+                this.cells[i][j].setAlive(false);
+            }
+        }
     }
     
-    public boolean getCellState(int i, int j) {
-        return this.grid[i][j].isVita();
+    public Cell[][] getCells () {
+    	return this.cells;
     }
     
-	public int getRows() {
-		return rows;
+    public boolean getCellState(int i, int j) throws outOfBoundsException {
+    	if (this.isOutOfBounds(i, j)) throw new outOfBoundsException(i, j, 0, 0, this.getRows(), this.getCols());
+        return this.cells[i][j].isAlive();
+    }
+    public int getRows() {
+    	return this.cells.length;
+    }
+    public int getCols() {
+    	return this.cells[0].length;
+    }
+    public boolean isOutOfBounds(int i, int j) {
+    	return i < 0 || i >= this.getRows() || j < 0 || j >= this.getCols();
+    }
+    
+    public void showGrid(IOutDev outdev) {
+    	for (int i = 0; i < this.getRows(); i++) {
+            for (int j = 0; j < this.getCols(); j++) {
+                this.cells[i][j].showCell(outdev);
+            }
+            outdev.write("\n");
+        }
 	}
-
-	public void setRows(int rows) {
-		this.rows = rows;
+    
+	@Override
+	public int hashCode() {
+		return 31 * Arrays.deepHashCode(cells);
 	}
-
-	public int getCols() {
-		return cols;
-	}
-
-	public void setCols(int cols) {
-		this.cols = cols;
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null || getClass() != obj.getClass())
+			return false;
+		Grid other = (Grid) obj;
+		return Arrays.deepEquals(cells, other.cells);
 	}
 }

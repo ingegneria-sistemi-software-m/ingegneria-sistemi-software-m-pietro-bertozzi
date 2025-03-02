@@ -1,8 +1,5 @@
 package conway;
-/*
- * Contratto definito dalla business logic
- */
-public interface IOutDev {
-	public void displayCell(String msg);
 
+public interface IOutDev {
+	public void write(String msg);
 }

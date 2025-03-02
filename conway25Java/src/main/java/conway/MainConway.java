@@ -1,21 +1,17 @@
 package conway;
 
 import conway.devices.ConwayInputMock;
+import conway.devices.ConwayOutput;
 
 public class MainConway  {
 
     public static void main(String[] args) {
-    	//configureTheSystem
-        Life life           = new Life( 3,3 );
-        LifeController cc   = new LifeController(life);   
-        ConwayInputMock cim = new ConwayInputMock(cc,life);
-        //start the system
+        Life life = new Life();
+        ConwayInputMock cim = new ConwayInputMock(life);
         cim.simulateUserControl();
+		ConwayOutput co = new ConwayOutput();
+		LifeController lc = new LifeController(life, co);
+        lc.play(0);
     }
 
 }
-
-//qui direi che l l input mock deve essere controllato da life controller e non essere nel main
-//poi il controller avrà un modo per interfacciarsi
-
-//cosa che non centra nulla 130.136.113.239 dopo

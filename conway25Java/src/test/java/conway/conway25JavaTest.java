@@ -1,25 +1,23 @@
 package conway;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import conway.devices.ConwayInputMock;
-
-//By default, JUnit comes with a bundled copy of hamcrest-core
+import conway.devices.ConwayOutput;
 
 public class conway25JavaTest {
-private static Life life;
-private static LifeController cc;
-private static ConwayInputMock cim;
-
+	private static Life life;
+	private static ConwayOutput co;
+	
 	@BeforeClass
 	public static void setup() {
 		System.out.println("setup");
-    	//configureTheSystem
-        life = new Life( 3,3 );
-        cc = new LifeController(life);   
-        cim = new ConwayInputMock(cc, life);		
+		life = new Life();
+		co = new ConwayOutput();
+		new LifeController(life, co);
 	}
 	
 	@After
@@ -28,20 +26,39 @@ private static ConwayInputMock cim;
 	}
 	
 	@Test
-	public void orizzontalToVertical() {
+	public void verticalToOrizzontal() {
+		Grid expectedGrid = new Grid(3, 3);
+		for (int j = 0; j < expectedGrid.getCols(); j++) {
+		    expectedGrid.switchCellState(1, j);
+		}
+		life.getGrid().resetGrid();
 		life.getGrid().switchCellState(0, 1);
 		life.getGrid().switchCellState(1, 1);
 		life.getGrid().switchCellState(2, 1);
-		
 		life.computeNextGen();
-		
-		//tutto da cambiare non mi piace per nulla coeme è fatto sto progetto
+		for (int i = 0; i < life.getGrid().getRows(); i++) {
+		    for (int j = 0; j < life.getGrid().getCols(); j++) {
+		         assertEquals(expectedGrid.getCells()[i][j], life.getGrid().getCells()[i][j]);
+		    }
+		}
 	}
-	
+
 	@Test
-	public void verticalToOrizzontal() {
+	public void orizzontalToVertical() {
+		Grid expectedGrid = new Grid(3, 3);
+		for (int i = 0; i < expectedGrid.getRows(); i++) {
+		    expectedGrid.switchCellState(i, 1);
+		}
+		life.getGrid().resetGrid();
+		life.getGrid().switchCellState(1, 0);
+		life.getGrid().switchCellState(1, 1);
+		life.getGrid().switchCellState(1, 2);
+		life.computeNextGen();
+		for (int i = 0; i < life.getGrid().getRows(); i++) {
+		    for (int j = 0; j < life.getGrid().getCols(); j++) {
+		         assertEquals(expectedGrid.getCells()[i][j], life.getGrid().getCells()[i][j]);
+		    }
+		}
 	}
 }
-
-//Con gradlew test, controllare - logs/apptest.log - build/reports/tests/test/index.html
 
