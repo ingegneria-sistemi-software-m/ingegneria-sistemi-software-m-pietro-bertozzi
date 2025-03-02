@@ -9,7 +9,8 @@ public class LifeController {
 
     public LifeController(Life game) {  
         this.life = game;
-        this.outdev = new ConwayOutput();	
+        this.outdev = new ConwayOutput();
+        //qui si deve creare l input secondo me
     }
 
     

@@ -14,3 +14,8 @@ public class MainConway  {
     }
 
 }
+
+//qui direi che l l input mock deve essere controllato da life controller e non essere nel main
+//poi il controller avrà un modo per interfacciarsi
+
+//cosa che non centra nulla 130.136.113.239 dopo
