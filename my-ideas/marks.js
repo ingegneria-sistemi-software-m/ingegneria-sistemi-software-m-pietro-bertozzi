@@ -11,7 +11,7 @@ function colorMarks() {
     const divs = document.querySelectorAll(".mark")
     console.log(divs)
     divs.forEach(div => {
-        const mark = div.querySelector("span").innerText.trim();
+        const mark = div.querySelector("span").innerText.trim().charAt(0);
         if (markToColor[mark]) div.style.backgroundColor = markToColor[mark]
     });
 }
