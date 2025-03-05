@@ -8,8 +8,9 @@
 
 Crea un ambiente virtuale chiamato "spider". Questo comando creerà una cartella con l'ambiente virtuale nella directory corrente.
 
-```bash 
+```bash
 python3 -m venv spider
+cd spider
 ```
 
 ### Attivare l'ambiente virtuale
@@ -17,7 +18,7 @@ python3 -m venv spider
 Attiva l'ambiente virtuale. Una volta attivato, il prompt del terminale mostrerà il nome dell'ambiente attivo.
 
 ```bash
-source venv/bin/activate
+source bin/activate
 ```
 
 ### Installare le dipendenze
@@ -33,7 +34,8 @@ pip install -r requirements.txt
 Eseguire lo script `local.py`, dove puoi passare la directory da esplorare e le parole chiave da cercare.
 
 ```bash
-python3 local.py -d directory -k keyword1 keyword2
+python3 local.py --help
+python3 local.py -k keyword1 keyword2 -d directory -a
 ```
 
 ### Disattivare l'ambiente virtuale
@@ -42,4 +44,13 @@ Quando hai finito di lavorare, disattivare l'ambiente virtuale. Questo ti riport
 
 ```bash
 deactivate
+```
+
+## Accesso rapido alle istruzioni
+
+In qualsiasi momento puoi accedere rapidamente a queste istruzioni. Utilizza:
+
+```bash
+chmod +x instructions.sh
+./instructions.sh
 ```

@@ -11,7 +11,7 @@ public class MainConway  {
         cim.simulateUserControl();
 		ConwayOutput co = new ConwayOutput();
 		LifeController lc = new LifeController(life, co);
-        lc.play(0);
+        lc.play(10);
     }
 
 }

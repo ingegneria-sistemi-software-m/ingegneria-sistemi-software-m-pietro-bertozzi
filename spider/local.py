@@ -2,7 +2,7 @@ import os
 import argparse
 from bs4 import BeautifulSoup
 
-def parse_local_files(directory, keywords=None):
+def parse_local_files(directory, keywords=None, absolute=False):
     found_pages = {keyword: [] for keyword in keywords} if keywords else {}
     visited_pages = []
     for root, _, files in os.walk(directory):
@@ -22,7 +22,10 @@ def parse_local_files(directory, keywords=None):
                             found_pages[keyword].append(filepath)
     print("Visited HTML:")
     for page in visited_pages:
-        print(f"  - {page}")
+        if absolute:
+            print(f"  - {page}")
+        else:
+            print(f"  - {os.path.relpath(page, directory)}")
     return found_pages
 
 def main():
@@ -38,12 +41,23 @@ def main():
         default="/mnt/c/Users/HP/OneDrive/Desktop/Magistrale/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-professore/iss25Material/docs/_build",
         help="Search directory"
     )
+    parser.add_argument(
+        "-a", "--absolute",
+        action="store_true",
+        help="Print absolute paths"
+    )
     args = parser.parse_args()
-    result = parse_local_files(args.directory, args.keywords)
+
+    result = parse_local_files(args.directory, args.keywords, args.absolute)
+
     if args.keywords:
         for keyword, pages in result.items():
             print(f"Keyword '{keyword}' found in the following HTML:")
             for page in pages:
-                print(f"  - {page}")
+                if args.absolute:
+                    print(f"  - {page}")
+                else:
+                    print(f"  - {os.path.relpath(page, args.directory)}")
+
 if __name__ == "__main__":
     main()
