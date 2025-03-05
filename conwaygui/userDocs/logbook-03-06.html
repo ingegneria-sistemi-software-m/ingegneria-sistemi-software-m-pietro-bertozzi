@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"crossorigin="anonymous"></script> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./commons/resources/styles/templateISS.css">
+		<link rel="stylesheet" type="text/css" href="./commons/resources/styles/main.css">
+		<link rel="stylesheet" type="text/css" href="./commons/resources/styles/navbar.css">
+		<link rel="stylesheet" type="text/css" href="./commons/resources/styles/table.css">
+		<link rel="stylesheet" type="text/css" href="./commons/resources/styles/code.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>BertozziPietro</title>
+	</head> 
+	<!--
+		<body onload="loadNav();">
+			<div id="openButton" class="openButton" onclick="openNav(true)">&#9776; Menu</div>
+			<div id="sidenav" class="sidenav">
+				<a class="closeButton" href="javascript:void(0)" onclick="closeNav(true)">&times;</a>
+				<a href=".README.html">ReadMe</a>
+				<a class="sprint" href="../../../Sprint0/Codice/userDocs/Cold%20Storage%20Service%20-%20Natali%20V3.html">Sprint0</a>
+				<a class="sprint" href="../../../Sprint1.0/Codice/userDocs/Sprint%201.0%20-%20V3.html">Sprint1.0</a>
+				<a class="sprint" href="../../../Sprint1.1/Codice/userDocs/Sprint%201.1%20-%20V3.html">Sprint1.1</a>
+				<a id="currentSprint" class="sprint" href="#">&#8211;&#8212; Sprint2 &#8212;&#8211;</a>
+				<div class="sidenavSection">
+					<a href="#Goal Sprint 2">Goal Sprint 2</a>
+					<a href="#Requisiti">Requisiti</a>
+					<a href="#Analisi dei Requisiti">Analisi dei Requisiti</a>
+					<a href="#Analisi del Problema">Analisi del Problema</a>
+					<a href="#Test Plan">Test Plan</a>
+					<a href="#Progettazione">Progettazione</a>
+					<a href="#Deployment">Deployment</a>
+				</div>
+				<p class="separator">&mdash;&mdash;&mdash;&ndash;&ndash;&mdash;&mdash;&mdash;</p>
+				<a class="sprint" href="../../../Sprint3/Codice/userDoc/Sprint%203.html">Sprint3</a>
+				<bottom-spacer/>
+			</div>
+	-->
+	<body>
+		<div id="top">
+			<h1>LABORATORIO DI INGEGNERIA DEI SISTEMI SOFTWARE <font size="5"></font> </h1>
+			</div>
+			<div class="body"> 
+			<h2>Introduction</h2>
+			<div class="remark">
+				Questo documento funge da traccia del lavoro svolto nel laboratorio di Ingegneria dei Sistemi Software M.
+			</div>
+			<h2>Requirements</h2>
+			<div class="remark">
+				Nessun cambiamento nei requisiti.
+			</div>
+			<h2>Requirement analysis</h2>
+			<div class="remark">
+				Nessun cambiamento nei requisiti.
+			</div>
+			<h2>Problem analysis</h2>
+			<div class="remark">
+				Di seguito è riportata una sintesi (generata da LLM) degli appunti che ho preso sulle riflessioni fatte in laboratorio col professore.<br>
+				Quando si progettano comunicazioni web, una delle scelte fondamentali riguarda il modo in cui i dati vengono scambiati tra client e server.<br>
+				Un'opzione è inviare intere pagine HTML a ogni richiesta (approccio tradizionale basato su @Controller in Spring MVC), oppure fornire solo dati strutturati in JSON/XML e lasciare che il frontend aggiorni dinamicamente l'interfaccia (approccio API-first con @RestController).<br>
+				L'uso di @Controller è più adatto a siti web tradizionali con rendering lato server, mentre @RestController si integra meglio con applicazioni moderne basate su frontend JavaScript (React, Angular, Vue) che consumano API REST.<br>
+				Tuttavia, le richieste HTTP sono di tipo request-response e possono risultare inefficienti per aggiornamenti frequenti o in tempo reale.<br>
+				Per risolvere questa limitazione, AJAX è stato introdotto per aggiornare dinamicamente parti di una pagina senza ricaricare l'intero documento.<br>
+				Tuttavia, AJAX è ancora basato su polling o long polling, introducendo ritardi e sovraccarico. L'evoluzione di questa tecnica è rappresentata dai WebSocket, che offrono una comunicazione bidirezionale tra client e server con aggiornamenti in tempo reale, riducendo il carico e migliorando l'interattività, rendendoli ideali per chat, notifiche live e monitoraggio dati in tempo reale.<br>
+				<br>
+				Possiamo anche analizzare il problema dal punto di vista degli utenti: utilizzando le User Stories (tipiche dello sviluppo agile).<br>
+				Per avere User Stories precise servono requisiti stringenti. Nel nostro caso (senza un vero committente) quindi margine di libertà:<br>
+				Amministratore<br>
+				<ul>
+					<li>Voglio poter avviare la simulazione in modo che il gioco inizi e gli spettatori possano vederlo.</li>
+					<li>Voglio poter generare una nuova configurazione casuale in modo da poter esplorare diverse evoluzioni del gioco.</li>
+					<li>Voglio poter fermare la simulazione in modo da poterla osservare senza che cambi automaticamente.</li>
+					<li>Voglio poter resettare la griglia in modo da iniziare una nuova simulazione da zero.</li>
+				</ul>
+				Spettatore<br>
+				<ul>
+					<li>Voglio poter vedere la simulazione in tempo reale in modo da osservare l'evoluzione delle celle.</li>
+					<li>Voglio che la mia vista si aggiorni automaticamente quando l'amministratore esegue azioni, in modo da seguire l'andamento della simulazione.</li>
+				</ul>
+			</div>
+			<h2>Test plans</h2>
+			<h2>Project</h2>
+			<h2>Testing</h2> 
+			<h2>Deployment</h2>
+			<h2>Maintenance</h2> 
+			<!-- USEFUL
+			<table style="width:100%" border="1">
+			<tr>
+			<td style="width:50%">
+			</td>
+			<td></td>
+			</tr>
+			</table>
+			-->
+			<div class="remark" style="background-color:rgba(86, 56, 253, 0.9); width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+				<div>
+					<h3>Bertozzi Pietro</h3><br>
+					E-mail istituzionale: <a href="mailto:pietro.bertozzi3@studio.unibo.it" style="color:white;" target="_blank">pietro.bertozzi3@studio.unibo.it</a><br>
+					GitHub organizzation gruppo progetto finale sito web: <a href="https://ingegneria-sistemi-software-m.github.io" style="color:white;" target="_blank">https://ingegneria-sistemi-software-m.github.io</a><br>
+					GitHub organizzation gruppo progetto finale: <a href="https://github.com/ingegneria-sistemi-software-m" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m</a><br>
+					GitHub repository personale: <a href="https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi</a><br>
+					Diario principale: <a href="https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi/tree/main/my-ideas" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi/tree/main/my-ideas</a><br>
+				</div>
+				<img src="./portrait.jpg" alt="errore immagine" width="15%" height="15%" style="border-radius: 15px;">
+			</div>	
+		</div>
+	</body>
+</html>

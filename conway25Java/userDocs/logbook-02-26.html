@@ -47,29 +47,24 @@
 			</div>
 			<h2>Requirements</h2>
 			<div class="remark">
-				Refactoring di ConwayLife25 con SpringBoot per permettere l'esecuzione nel distribuito.
-				Ogni giocatore deve vedere tutta la griglia al completo e devono essere tutte sincronizzate.
+				Refactoring di ConwayLife25 in Java per introdurre una rappresentazione esplicita di Cell e Grid come classi Java.
 			</div>
 			<h2>Requirement analysis</h2>
 			<div class="remark">
-				I requisiti precedenti rimangono validi ma se ne aggiungono altri.
-				Un giocatore avrà un ruolo di amministratore del gioco e potrà giocare coem se fosse in locale.
-				Tutti gli altri giocatori saranno semplci spettatori.
+				I requisiti non cambiano rispetto alla versione precedenete: è semplicemente un refactoring.
 			</div>
 			<h2>Problem analysis</h2>
 			<div class="remark">
-				La comunicazione tra i nodi deve essere ridondante oppure no?
-				Se non è ridondante, come gestire gli spettatori che si uniscono a partita già iniziata?
-				Una possibile soluzione è inviare agli spettatori solo le coordinate delle celle che devono effettivamente cambiare stato. In questo caso, è fondamentale prevedere momenti di sincronizzazione tra tutti i giocatori, simili a delle barriere di sincronizzazione.
-				Ma quando deve avvenire questa sincronizzazione?
-				<ul>
-					<li>Se avviene solo all'inizio della partita, nessuno può unirsi successivamente.</li>
-					<li>Se avviene periodicamente, i nuovi giocatori possono entrare senza disturbare il sistema, ma in assenza di nuovi ingressi si sprecherebbero risorse. Questo approccio funziona bene con molti giocatori.</li>
-					<li>Se la sincronizzazione avviene al momento dell'ingresso di un nuovo spettatore, i messaggi non risultano mai ridondanti. Tuttavia, se più giocatori si uniscono in un breve intervallo di tempo, potrebbero sorgere complicazioni. Questo metodo è più adatto a un numero ridotto di giocatori.</li>
-				</ul>
+				Dobbiamo riflettere sul rapporto tra la griglia e le celle.
+				Forse le celle sono semplicemente parti della griglia o forse hanno una loro indipendenza e conseguente responsabilità.
 			</div>
 			<h2>Test plans</h2>
 			<h2>Project</h2>
+			<div class="remark">
+				In futuro potremmo voler implementare il gioco in distribuito, con una sola cella per monitor.
+				Tenendo questo a mente, è più corretto progettare le celle come classi indipendenti.
+				In ingegneria del SW di questa relazione si indica col termine aggregazione (contrapposta alla composizione).
+			</div>
 			<h2>Testing</h2> 
 			<h2>Deployment</h2>
 			<h2>Maintenance</h2> 
@@ -81,7 +76,18 @@
 			<td></td>
 			</tr>
 			</table>
-			-->   	
+			--> 
+			<div class="remark" style="background-color:rgba(86, 56, 253, 0.9); width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+				<div>
+					<h3>Bertozzi Pietro</h3><br>
+					E-mail istituzionale: <a href="mailto:pietro.bertozzi3@studio.unibo.it" style="color:white;" target="_blank">pietro.bertozzi3@studio.unibo.it</a><br>
+					GitHub organizzation gruppo progetto finale sito web: <a href="https://ingegneria-sistemi-software-m.github.io" style="color:white;" target="_blank">https://ingegneria-sistemi-software-m.github.io</a><br>
+					GitHub organizzation gruppo progetto finale: <a href="https://github.com/ingegneria-sistemi-software-m" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m</a><br>
+					GitHub repository personale: <a href="https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi</a><br>
+					Diario principale: <a href="https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi/tree/main/my-ideas" style="color:white;" target="_blank">https://github.com/ingegneria-sistemi-software-m/ingegneria-sistemi-software-m-pietro-bertozzi/tree/main/my-ideas</a><br>
+				</div>
+				<img src="./portrait.jpg" alt="errore immagine" width="15%" height="15%" style="border-radius: 15px;">
+			</div>
 		</div>
 	</body>
 </html>
