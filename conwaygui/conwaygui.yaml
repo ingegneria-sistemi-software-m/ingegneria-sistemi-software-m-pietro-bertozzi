@@ -12,4 +12,5 @@ services:
 #    network_mode: "host"
 
 
-## docker-compose -f conwaygui.yaml -p conwaygui up   
+## docker login -u b3rtozzipietro@gmail.com
+## docker-compose -f conwaygui.yaml -p conwaygui up
