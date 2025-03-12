@@ -56,14 +56,26 @@ public class ConwayCallerWS {
             sendMessageOnWs("cell-3-2");
 
             
-            sendMessageOnWs("start");
-            CommUtils.delay(3000);
-            sendMessageOnWs("stop");
+            //sendMessageOnWs("start");
+            //CommUtils.delay(3000);
+            //sendMessageOnWs("stop");
             
+            myjob();
             
         } catch (Exception e) {
         	CommUtils.outred("ConwayCallerWs | ERROR:" +e.getMessage());
         }    	
+    }
+    
+    protected void myjob() {
+    	new Thread() {
+    		public void run() {
+    			 for (int i = 1; i <= 5; i++) {
+    				 CommUtils.outmagenta("working!");
+    				 CommUtils.delay(500);
+    			 }
+    		}
+    	}.start();
     }
     
     @OnOpen

@@ -80,7 +80,6 @@ public class WSIoDev extends AbstractWebSocketHandler implements IOutDev{  //imp
 	
 	/*
 	 * Gestione comandi provenienti dalla GUI
-	 */
 	@Override //since AbstractWebSocketHandler
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 		CommUtils.outgreen(name + " | receives: " + message + " wirh ownerOn=" + ownerOn );		
