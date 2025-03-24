@@ -2,7 +2,7 @@ import os
 import argparse
 from bs4 import BeautifulSoup
 
-def parse_local_files(directory, keywords=None, absolute=False):
+def parse_local_files(directory, keywords, absolute):
     found_pages = {keyword: [] for keyword in keywords} if keywords else {}
     visited_pages = []
     for root, _, files in os.walk(directory):
@@ -54,7 +54,7 @@ def main():
         for keyword, pages in result.items():
             print(f"Keyword '{keyword}' found in the following HTML:")
             for page in pages:
-                if args.absolute:
+                if args.absolute: 
                     print(f"  - {page}")
                 else:
                     print(f"  - {os.path.relpath(page, args.directory)}")

@@ -20,7 +20,7 @@ private Interaction connwws;
 		String wsaddr = System.getenv("WSADDR");
 		if( wsaddr == null ) {
 			CommUtils.outgreen( "OutWs | wsaddr local= " + wsaddr ); 	
-			wsaddr = "192.168.1.132:7110";
+			wsaddr = "localhost:7110";
 		}
 		else {
 			CommUtils.outgreen( "OutWs | wsaddr remote= " + wsaddr ); 	
@@ -31,7 +31,7 @@ private Interaction connwws;
 	@Override
 	public void displayCell(Cell cell) {
 		try {
-			CommUtils.outmagenta("OutWs | displayCell " + cell);
+//			CommUtils.outmagenta("OutWs | displayCell " + cell);
 			int value = cell.getState() ? 1 : 0;
 			int x = cell.getX() + 1;  //mapping to GUI coords
 			int y = cell.getY() + 1;
@@ -45,6 +45,7 @@ private Interaction connwws;
 	@Override
 	public void display(String msg) {
 		try {
+//			CommUtils.outyellow("OutWs | display:" + msg);
 			connwws.forward(msg);
 		} catch (Exception e) {
 			CommUtils.outred("OutWs | display ERROR");

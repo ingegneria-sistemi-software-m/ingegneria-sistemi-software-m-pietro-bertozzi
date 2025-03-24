@@ -3,8 +3,9 @@ import conwayMqtt.Cell;
 import conwayMqtt.IOutDev;
 import conwayMqtt.LifeController;
 import unibo.basicomm23.interfaces.Interaction;
+import unibo.basicomm23.mqtt.MqttInteraction;
 import unibo.basicomm23.utils.CommUtils;
-import unibo.basicomm23.mqtt.MqttConnection25;
+
 
 
 public class OutInMqtt implements IOutDev{
@@ -18,15 +19,15 @@ public class OutInMqtt implements IOutDev{
  		this.gameControl = LifeController;
 		String broker = System.getenv("MQTTBROKER_URL");
 		if( broker == null ) {
-			//broker = "tcp://localhost:1883";   //in locale outof docker
-			broker = "tcp://192.168.1.132:1883";
-			CommUtils.outgreen( "OutInMqtt | MqttConnection25 outside docker " + broker );
+			broker = "tcp://localhost:1883";   //in locale outof docker
+			//broker = "tcp://192.168.1.132:1883";
+			CommUtils.outgreen( name + " |  outside docker " + broker );
 		}
 		else {
-			CommUtils.outgreen( "OutInMqtt | MqttConnection25 in docker to " + broker ); 	
+			CommUtils.outgreen( name + " |  in docker to " + broker ); 	
 		}					
 
-  		mqttConn = new MqttConnection25( name , broker, "lifein", "guiin" );
+  		mqttConn = new MqttInteraction( name , broker, "lifein", "guiin" );
   		CommUtils.outcyan(name + " | mqtt connection done " + mqttConn);
   		activateReceive();
 	}
@@ -34,7 +35,7 @@ public class OutInMqtt implements IOutDev{
 	@Override
 	public void display(String msg) {
 		try {
-			CommUtils.outcyan("OutInMqtt| display forward "+ msg);
+//			CommUtils.outcyan("OutInMqtt| display forward "+ msg);
 			mqttConn.forward(msg);  
 			//giunge alla topic guiin su cui attende WSConwayguiLifeMqtt 
 			//che poi fa broadcastToWebSocket.
@@ -74,7 +75,7 @@ public class OutInMqtt implements IOutDev{
 	}
 
 	public void elabMsg(String message) {
-		CommUtils.outgreen(name + " | elabMsg:" + message + " gameControl=" + gameControl);
+		CommUtils.outgreen(name + " | elabMsggg:" + message + " gameControl=" + gameControl);
 		if( gameControl == null ) return;
 		if( message.equals("start")) {
 			gameControl.startTheGame();
@@ -84,8 +85,11 @@ public class OutInMqtt implements IOutDev{
 			gameControl.exitTheGame();
 		}else if( message.equals("clear")) {	
 			gameControl.clearTheGame();
-			display("clearmsglist");   //per eliminare la historuìy dei messaggi su "msgslist
+//			display("clearmsglist");   //per eliminare la historuìy dei messaggi su "msgslist
  		}
+		else if( message.startsWith("cell(")) {
+			CommUtils.outyellow("ignoro cell(");
+		}
 		else if( message.startsWith("cell")) {
 			String[] parts = message.split("-");  //cell-3-2
 			int x = Integer.parseInt(parts[1]);

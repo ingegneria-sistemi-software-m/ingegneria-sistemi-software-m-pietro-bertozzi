@@ -76,7 +76,7 @@ public class Life {
         return count;
     }
 
-    protected void computeNextGen(   ) {
+    public void computeNextGen(   ) {  //invocato dal Controller
     	gridStable = false;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {

@@ -33,10 +33,11 @@ public class LifeController {
     
     public LifeController(Life game){  
         this.life = game;
-        new OutInMqtt( this  ); //attivato come receiver
-        outdev    = new OutWs(   ); 
+        //OTTIMIZZAZIONE
+//        new OutInMqtt( this  ); //attivato come receiver
+//        outdev    = new OutWs(   ); 
        
-//        outdev    = new OutInMqtt( this  );   //attivato come I/O
+         outdev    = new OutInMqtt( this  );   //attivato come I/O
        CommUtils.outyellow("LifeController CREATED ... "  + outdev);
      }
  
@@ -62,11 +63,11 @@ public class LifeController {
 	}
 
 	public void clearTheGame() {
+		outdev.display("lfctrl: clearing");
  		stopTheGame();
  		CommUtils.delay(500);   //prima fermo e poi ...
 		epoch = 0;
 		resetAndDisplayGrids(  );   
-		outdev.display("clear");   // ... pulisco la GUI
 		//resetAndDisplayGridsOptimized(  );  
 	}
 	
@@ -77,7 +78,7 @@ public class LifeController {
     protected void play() {  
 			new Thread() {
 			public void run() {			
-				outdev.display("game started"); 
+				outdev.display("lfctrl: game started"); 
 				while( running ) {
 					try {
 						TimeUnit.MILLISECONDS.sleep(generationTime);
@@ -93,15 +94,17 @@ public class LifeController {
 						if( gridEmpty || gridStable ) {
 				    		running = false;
 				    		String reason = gridStable ? "stable" : "empty";
-				    		outdev.display("grid GAME ENDED after " + epoch + 
-				    				" Epochs since empty=" + gridEmpty + " stable="+ gridStable);
+				    		String outInfo = "lfctrl: GAME ENDED after " + epoch + 
+				    				" Epochs since empty=" + gridEmpty + " stable="+ gridStable;
+				    		CommUtils.outyellow(outInfo);
+				    		outdev.display(outInfo);
 				    		epoch = 0;
 				    	}
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				}//while
-				outdev.display("game stopped"); 
+				outdev.display("lfctrl: game stopped"); 
 			}
 			}.start();
     }
@@ -114,7 +117,7 @@ public class LifeController {
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
 				Cell cell = grid.getCell(i,j);
-				outdev.displayCell(cell); 
+				outdev.displayCell( cell ); 
  			}			
 		}
 	}
