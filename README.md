@@ -6,10 +6,11 @@ Anno Accademico: 2024/2025
 
 ## Organizzazione
 
-Nella sezione [Argomenti Principali](#argomenti-principali) ho raccolto le informazioni teoriche tratte da libri e fonti accademiche, mentre nella sezione [Riflessioni sul Lavoro Svolto](riflessioni) ho aggiunto le mie riflessioni e considerazioni personali sugli argomenti trattati e sugli insegnamenti che ne derivano. La sezione "Pensieri" raccoglie gli elaborati da consegnare al termine di ciascuna delle tre parti del corso.
+Nella sezione [Argomenti Principali](#argomenti-principali) ho raccolto le informazioni riguardanti i singoli argomenti trattati, mentre nella sezione [Riflessioni sul Lavoro Svolto](riflessioni) ho aggiunto le mie riflessioni e considerazioni personali sugli argomenti trattati e sugli insegnamenti che ne derivano. La sezione Riflessioni sul Lavoro Svolto raccoglie gli elaborati da consegnare al termine di ciascuna delle tre parti del corso.
 
 Il corso si suddivide in tre parti fondamentali.
 Di seguito vengono presentati i dettagli di ciascuna parte, con i vari progetti pratici inclusi in ogni sezione.
+
 - [Dai Programmi ai Microservizi](#progetti-parte-a---dai-programmi-ai-microservizi)
 - [Sviluppo di Applicazioni Distribuite e IOT](#progetti-parte-b---sviluppo-di-applicazioni-distribuite-e-iot)
 - [Dai Requisiti al Prodotto con Processi Agili e Incrementali basati su Modelli](#progetti-parte-c---dai-requisiti-al-prodotto-con-processi-agili-e-incrementali-basati-su-modelli)

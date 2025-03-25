@@ -1,6 +1,3 @@
-#Ignora i documenti generati cambiando formato agli altri
-*.pdf
-
 #Ignora i file di configurazione
 *.cfg
 

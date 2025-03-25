@@ -39,7 +39,7 @@
 	-->
 	<body>
 	<div id="top">
-	<h1>DIARIO PRINCIPALE DI INGEGNERIA DEI SISTEMI SOFTWARE <font size="5"></font> </h1>
+	<h1>ELABORATO FASE A <font size="5"></font> </h1>
 	</div>
 	<div class="body"> 
 		<div class="remark" style="background-color:rgba(86, 56, 253, 0.9); width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
@@ -53,66 +53,117 @@
 			</div>
 			<img src="./portrait.jpg" alt="errore immagine" width="15%" height="15%" style="border-radius: 15px;">
 		</div>
+
 		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
 			<div style="flex: 1; padding-right: 20px;">
-				<h3>25/02 - Prima Analisi</h3>
-				La mia tesi di progetto in Ingegneria del Software ha dato i suoi frutti. Mi sento sicuro nella distinzione delle diverse fasi dello sviluppo software: analisi dei requisiti, analisi del problema, progettazione e implementazione. Comprendere l'importanza di ciascuna di queste fasi è un elemento essenziale di questa prima fase di rodaggio.<br>
-				Tuttavia, non sono ancora in grado di stimare con precisione i tempi di realizzazione di un progetto. Considero questa una lacuna comprensibile, data la mia limitata esperienza. Ritengo però fondamentale acquisire maggiore consapevolezza in questo aspetto. Il corso, essendo molto pratico, mi offrirà l’opportunità di osservare e riflettere sui tempi dei processi di sviluppo, confrontando anche il mio ritmo con quello degli altri. So per certo, però, che il concetto di "ore uomo" non è sufficiente a descrivere appieno la questione: l’utilizzo dell’AI generativa ha un impatto significativo e non trascurabile.<br>
-				Ho grandi aspettative per questo corso. Sono certo che sarà stimolante e mi offrirà l’opportunità di migliorare concretamente le mie capacità pratiche.<br>
-			</div>
-			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px">B+</span>
-		</div>
-		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
-			<div style="flex: 1; padding-right: 20px;">
-				<h3>27/02 - Prima Implementazione</h3>
-				L'implementazione è stata semplice. A posteriori, confrontando il mio lavoro con quello dei colleghi, mi sono reso conto di essere stato più preciso, ma anche più lento. Un po' di ruggine è comprensibile, dato che non utilizzo Eclipse da mesi. In generale, però, ho avuto una buona impressione.<br>
-				Devo ricordarmi di chiedere al professore quale logica ha seguito nel rendere alcuni metodi protected. Conosco il significato della keyword, ma non sono sicuro del criterio con cui è stata applicata.<br>
-				Nel complesso, credo che la mia implementazione possa essere in alcuni aspetti persino migliore di quella proposta. <br>
-				In particolare, ho strutturato i metodi show nelle classi del modello in modo che accettino come parametro il dispositivo di output. <br>
-				Trovo che questa soluzione sia semplice e intuitiva da utilizzare.<br>
-			</div>
-			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px">A</span>
-		</div>
-		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
-			<div style="flex: 1; padding-right: 20px;">
-				<h3>04/03 - Primi Passi nel Distribuito</h3>
-				Le mie osservazioni erano corrette, ma incomplete.<br>
-				Mi sono concentrato esclusivamente sulle interazioni tra i nodi dal punto di vista del networking, trascurando l'aspetto tecnologico e implementativo.<br>
-				Durante la lezione, il professore ha spiegato come, nei sistemi distribuiti basati sul modello MVC, i nodi con ruoli diversi abbiano controller differenti.<br>
-				Ora il concetto mi è chiaro, ma inizialmente non mi ero nemmeno accorto che questa sarebbe stata una problematica chiave.<br>
-				Anche se non ho esperienza di progettazione di sistemi distribuiti, se mi fossi chiasto come implementarlo mi sarei reso conto della problematica.<br>
-			</div>
-			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px">B-</span>
-		</div>
-		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
-			<div style="flex: 1; padding-right: 20px;">
-				<h3>06/03 - Ruolo delle WebSocket</h3>
-				Io ero già piuttosto familiare con le WebSocket e con HTTP/2 prima di questo corso. Mi è chiaro come, a differenza di meccanismi simili ad AJAX, queste tecnologie permettano di inviare solo le modifiche da applicare alla nuova pagina, invece di ricaricare l'intera pagina.
-				Nel nostro contesto, ciò consentirà di trasmettere solo i cambiamenti di stato delle celle, evitando l'invio di messaggi quando non è necessario alcun aggiornamento.<br>
-				<br>
-				Ammetto che il professore ha messo enfasi sulla responsabilità in un modo che mi è nuovo.<br>
-				Invece di considerare semplicemente il server come causa alla quale le funzioni di callback reagiscono, ha sottolineato come il meccanismo asincrono è responsabilità della libreria di websocket.
-				La metafora del gayser rende bene l'idea.
-			</div>
-			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px">B+</span>
-		</div>
-		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
-			<div style="flex: 1; padding-right: 20px;">
-				<h3>11/03 - M2M Interactions</h3>
-				Mi è perfettamente chiaro cosa si intende con Machine to Machine Interaction, piuttosto che Human to Machine Interaction.<br>
-				Le implicazioni non si limitano alla automazzione del tesing, ma le Machine to Machine Interaction sono alla base dei multiservizi.<br>
-				I microservizi sono cruciali per raggiungere l'obbiettivo di questa prima fase del corso.<br>
-				Tutto bene questa volta. Ho capito gli argomenti spiegati e riesco ad applicarli nella pratica.<br>
-				Comincio ad avere anche una buona visione di insieme del corso: quando il professore fa delle osservaizoni riesco ad intuire correttamente quali saranno le conclusioni.<br>
-			</div>
-			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"> A </span> 
-		</div>
-		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
-			<div style="flex: 1; padding-right: 20px;">
-				<h3>13/03 - </h3>
+				<h3>Quello che lo scrivente ha percepito sia la finalità dei contenuti discussi in questa prima fase, e quello che lo scrivente si aspetta sia lo scopo delle prossime fasi del corso</h3>
+				Il motto "Quello che non posso creare, non lo saprò mai capire" di Feynmann riflette pienamente la finalità di questa parte del percorso.<br>
+				Il corso si distingue per il suo approccio pratico, interamente in laboratorio, dove seguire le lezioni non è mai un'attività puramente contemplativa.<br>
+				L’obiettivo di abituarsi a un approccio pratico è già di per sé significativo, ma c'è di più.<br>
+				I richiami all’ingegneria del software mostrano come l’attività in laboratorio non sia in antitesi con la teoria, ma piuttosto una sintesi di teoria e pratica.<br>
+				La comprensione del problema, l'analisi e la progettazione, ma anche il testing, sono essenziali per costruire soluzioni funzionanti, e questo approccio completo permette di acquisire una visione più profonda dei contenuti trattati.<br>
+				Per le prossime fasi del corso, mi aspetto di esplorare anche componenti hardware e credo che saremo chiamati a una maggiore autonomia operativa, affrontando sfide che richiederanno di integrare quanto appreso.<br>
+				In generale, non ho le idee del tutto chiare su come si svilupperà il corso, ma in fondo mi va bene così.<br>
 			</div>
 			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
 		</div>
-	</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>I sistemi che lo scrivente è riuscito a realizzare e sperimentare, nell’ambito di quelli discussi nella prima fase del corso</h3>
+				Ho sperimentato con tutti i progetti forniti dal professore, eseguendoli per comprenderne il funzionamento.<br>
+				Solo meno di metà di essi ho applicato modifiche per testare varianti e vedere l’effetto di piccoli cambiamenti.<br>
+				Durante le prossime settimane, continuerò a sperimentare ulteriormente.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Le nuove abilità / competenze che lo scrivente pensa di avere appreso (o che sia possibile apprendere) dopo questa prima fase, sia in relazione alla parte ‘pratica’ del saper-fare (strumenti, tecnologie, etc.) sia con riferimento ad aspetti più ‘concettuali’ (metodologie, modelli, etc.)</h3>
+				Durante questa prima fase del corso, ho acquisito familiarità con diverse tecnologie come Spring Boot, MQTT, WebSocket, Docker e Gradle per la gestione delle dipendenze.<br>
+				Dal punto di vista concettuale, molte delle idee trattate mi erano già familiari, grazie alla tesi in Ingegneria del Software T durante la triennale.<br>
+				Inoltre, il corso di linguaggi e modelli computazionali mi ha aiutato a sviluppare una maggiore sensibilità verso concetti teorici avanzati, permettendomi di apprezzare appieno le riflessioni del professore.<br>
+				Più di tutti mi ha interessato la metodologia Srum di sviluppo incrementale che ritengo illuminante e a cui, prima di questo corso, non ho mai dedicato il tempo che merita.<br>
+				Personalmente mi ritengo più portato naturalmente per approfondire la teoria, piuttosto che essere efficiente nella pratica, ma spero di migliorare in questo nel corso dei prossimi mesi.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Quello che lo scrivente pensa sia il motivo per cui, come primo esempio di sistema software da sviluppare, è stato proposto, come caso di studio, il gioco della vita di Conway</h3>
+					Il gioco di Conway, Game of Life, è stato scelto come esempio principalmente per la sua semplicità e per la ricchezza di dinamiche che riesce a generare nonostante le sue regole intuitive.<br>
+					Le regole di base del gioco sono facili da comprendere, intuitive, ma nonostante ciò, piccole modifiche nell'input, possono avere un impatto enorme sull'output e sulle evoluzioni successive.<br>
+					Questo rende difficile testare il corretto funzinamento dell'applicazione "ad occhio" e incentiva ad affinare le capacità di testing automatizzato.<br>Inoltre, il concetto di turno o epoca, che definisce l'evoluzione del gioco, si presta bene a esperimenti con comunicazione asincrona; ogni "epoca" può essere vista come un momento in cui si verificano modifiche indipendenti e non necessariamente sincronizzate tra loro.<br>
+					Un altro aspetto interessante di Conway è la relazione tra la griglia e le celle, che richiama un caso generale delle differenze tra composizione e aggregazione.<br>
+					Questo approccio consente di riflettere sulle responsabilità all'interno di un sistema e prepara il terreno per l'ingresso nel mondo dei microservizi, dove le responsabilità sono chiaramente separate.<br>
+					Un esperimento che potremmo svolgere, prevede che ogni host gestisca (visualizzi) solo una cella sul proprio monitor, esplorando ulteriormente la distribuzione delle responsabilità nel sistema.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Le motivazioni che lo studente ritiene siano alla base della scelta di utilizzare Java e framework (come SpringBoot) legati a Java per lo sviluppo del caso di studio e se ritiente queste scelte limitative oppure obsolete, indicando alternative che ritiene più moderne o più adatte</h3>
+				La scelta di utilizzare Java e framework come Spring Boot per lo sviluppo del caso di studio è stata motivata principalmente dal fatto che in ambito universitario siamo già abituati a lavorare con questo linguaggio e con tali tecnologie.<br>
+				Optare per un cambio radicale di tecnologia avrebbe comportato il rischio di distrarre l'attenzione dai punti chiave del corso, che si concentrano anche su concetti architetturali e progettuali.<br>
+				Non sarebbe stato ragionevole perdere tempo in quel modo, anche perchè Java con Spring Boot rimane una scelta solida per un caso di studio come il nostro, in quanto fornisce una struttura stabile, ben supportata e ampiamente utilizzata nel settore.<br>
+				Sarebbe comunque stato possibile fare una scelta diversa. Da un breve ricerca online sembra che gli altri cantidati acceditati sarebbero potuti essere:
+				<ol>
+					<li> Python con il framework Django, che offre un'ottima velocità di sviluppo
+					<li> Node.js con Express, che si adatta perfettamente a un modello asincrono, particolarmente adatto per applicazioni web moderne e comunicazione in tempo reale.
+				</ol>
+				<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Gli aspetti di Ingegneria del software (key points) che il caso di studio ha permesso di richiamare o di introdurre nelle varie fasi ‘evolutive’ dei prototipi sviluppati durante la fase 1</h3>
+				Seguen un elenco dei punti chiave, spiegati brevemente:<br>
+				<ol>
+					<li> Domain Driven Software Development: è essenziale identificare le entità che appartengono al dominio del sistema per poter creare un modello che ne rappresenti accuratamente gli aspetti fondamentali.
+					<li> Single Responsibility Principle: applicato prima a funzioni e classi ma successivamente anche alle prime bozze di microvervizi.
+					<li> Inversione delle Dipendenze: permette una soluzione tecnology indipendent. "IODev" e "WsIODev" sono esempi pratici.
+					<li> Principio di Iron Man: utilizzando un framework no abbiamo dovuto cambiare l'applicazione preesistente, un po’ come l'armatura che viene applicata al supereroe senza alterarlo.
+					<li> Tecnologie Asincrone: L'uso di tecnologie asincrone, come WebSocket ed MQTT, ha permesso di ribaltare l'iniziativa dando il timone al server, come è naturale che sia.
+					<li> M2M Interactions: all'interazione Machine-to-Machine segue naturlmente il concetto di microservizio, e suggerisce considerazioni interassanti riguardo al testing automatico.
+					<li> Linguaggio come Astrazione: È stato evidente come il linguaggio di programmazione, e più in generale l’astrazione delle comunicazioni, ha influenzato il nostro modo di pensare e progettare soluzioni, spingendo verso una comprensione più profonda del dominio (In seguito maggiori dettagli).
+				</ol>
+		</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Se lo scrivente ritiene oppure no, che il sistema software sviluppato al termine della prima fase sia un sistema distribuito basato su microservizi</h3>
+				Il sistema che stiamo sviluppando presenta già molte caratteristiche di un'architettura basata su microservizi, come la suddivisione in servizi distinti che comunicano tramite un broker (MQTT).<br>
+				Questo approccio permette una distribuzione dei compiti, seppur iniziale, tra i vari componenti, che sono separati e si scambiano informazioni utilizzando i topic.<br>
+				Tuttavia, ci sono alcune tematiche, come la scalabilità e la tolleranza ai guasti, che non sono state ancora adeguatamente affrontate.<br>
+				Questi sono aspetti chiave nei sistemi distribuiti, come ho appreso durante il corso di Sistemi Operativi M.<br>
+				La scalabilità permette ai servizi di crescere in modo indipendente, mentre la tolleranza ai guasti garantisce che, se uno dei microservizi fallisce, gli altri possano continuare a funzionare senza compromettere l'intero sistema.<br>
+				Sebbene ci siano le basi per un'architettura a microservizi, l'approfondimento di questi aspetti è essenziale per parlare di un vero sistema distribuito, in grado di gestire in modo autonomo i propri errori e adattarsi alla crescita.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Il ruolo che lo scrivente ritiene abbia lo sviluppo di librerie ‘custom’ durante la realizzazione di un sistema software e perchè, per il caso di studio, sono state realizzate classi (relative al protocollo MQTT) inserite nella libreria unibo.basicomm23-1.0.jar</h3>
+				Lo sviluppo di librerie "custom" è fondamentale per colmare l'abstraction gap, ovvero la distanza tra le necessità del dominio e gli strumenti tecnologici disponibili.<br>
+				Quando gli strumenti esistenti non soddisfano le esigenze specifiche, le librerie personalizzate offrono interfacce più adeguate, migliorando leggibilità e manutenibilità del sistema.<br>
+				Inoltre, ridurre l'abstraction gap implica anche una technology independence, che consente di adattare facilmente il sistema a nuove esigenze senza essere vincolati a soluzioni troppo specifiche.<br>
+				Credo che il professore abbia scelto MQTT proprio perché, essendo un protocollo a basso livello, è necessario astrarre ulteriormente per poter sviluppare con un linguaggio conforme al nostro modo di esseri umani, di esprimere la comunicazione<br>
+				L’obiettivo è farci confrontare con le difficoltà che derivano dall’utilizzo di strumenti di basso livello, enfatizzando la problematica del linguaggio.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
+		<div class="remark mark" style="background-color:black; width:100%; text-align:left; color:white; display:flex; align-items:center; justify-content:space-between; padding:10px;">
+			<div style="flex: 1; padding-right: 20px;">
+				<h3>Opzionalmente: Il ruolo che lo scrivente ritiene abbia il concetto di linguaggio (di programmazione, ma non solo) più volte evocato dal docente come esempio di un salto evolutivo fondamentale dell’informatica rispetto al solo sviluppo di librerie</h3>
+				Il parallelismo tra linguaggi naturali e linguaggi di programmazione è perfettamente valido.<br>
+				Un linguaggio, che sia di programmazione o naturale, non si limita a fornire una forma per esprimere idee, ma gioca un ruolo fondamentale nel processo stesso di creazione e formulazione delle idee.<br>
+				Persone che conoscono linguaggi naturali diversi tendono a pensare in modo diverso proprio a causa della struttura e dei vocaboli a loro disposizione.<br>
+				Imparare nuovi vocaboli non significa solo migliorare l’espressione, ma anche affinare la granularità con cui siamo in grado di cogliere le sfumature, e quindi di pensare criticamente.<br>
+				Svulippare astrazioni, come possono essere le librerie, è quindi una procedura estremamente sofisticata: normalmente il linguaggio è il modo in cui pensiamo alle idee, ma per chiedersi in quale linguaggio è bene esprimere un'idee è necessaria un profonda familiarità con l'idea stessa.
+				Questo evidenzia quanto sia importante, ma anche complesso, sviluppare un linguaggio che soddisfi le esigenze specifiche di un determinato contesto.<br>
+			</div>
+			<span style="font-size: 12vw; flex-shrink: 0; margin-left: 40px; margin-right: 40px"></span>
+		</div>
 	</body>
 </html>
