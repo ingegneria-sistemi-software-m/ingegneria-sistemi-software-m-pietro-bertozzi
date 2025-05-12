@@ -2,6 +2,6 @@
 % xxx description   
 %====================================================================================
 %====================================================================================
-context(ctxxx, "localost",  "TCP", "8920").
- qactor( a0, ctxxx, "it.unibo.a0.A0").
+context(ctxxxx, "localhost",  "TCP", "8920").
+ qactor( a0, ctxxxx, "it.unibo.a0.A0").
  static(a0).

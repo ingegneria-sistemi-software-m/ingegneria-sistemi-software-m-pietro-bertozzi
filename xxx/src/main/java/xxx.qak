@@ -1,9 +1,0 @@
-System xxx
-
-Context ctxxx ip [host="localost" port=8920]
-
-QActor a0 context ctxxx{
-	State so initial {
-		println("hello world") color magenta
-	}
-}
