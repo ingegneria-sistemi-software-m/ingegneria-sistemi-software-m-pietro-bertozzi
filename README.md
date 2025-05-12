@@ -12,7 +12,7 @@ Il corso si suddivide in tre parti fondamentali.
 Di seguito vengono presentati i dettagli di ciascuna parte, con i vari progetti pratici inclusi in ogni sezione.
 
 - [Dai Programmi ai Microservizi](#progetti-parte-a---dai-programmi-ai-microservizi)
-- [Sviluppo di Applicazioni Distribuite e IOT](#progetti-parte-b---dagli-oggetti-agli-attori)
+- [Dagli Oggetti agli Attori](#progetti-parte-b---dagli-oggetti-agli-attori)
 - [Dai Requisiti al Prodotto con Processi Agili e Incrementali basati su Modelli](#progetti-parte-c---dai-requisiti-al-prodotto-con-processi-agili-e-incrementali-basati-su-modelli)
 
 Infine, è presente un’ultima sezione dedicata a progetti praticipensati per migliorare l’efficienza del lavoro o semplificarlo, automatizzandone alcuni aspetti. Questi [Progetti Ausiliari](#progetti-ausiliari), pur essendo utili, non producono risultati rilevanti ai fini del corso e non sarebbero stati strettamente necessari.

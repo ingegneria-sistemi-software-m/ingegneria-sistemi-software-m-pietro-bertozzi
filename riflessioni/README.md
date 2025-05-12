@@ -7,7 +7,8 @@ Durante lo svolgimento del corso terrò traccia delle mie idee e di conseguenza 
 Nei file denominati `Fase<n>ISS25-BertozziPietro.html`, verranno esplorati e approfonditi i temi principali trattati durante il corso. Questi documenti, una volta convertiti in formato `pdf`, rappresentano una sintesi delle idee e dei concetti discussi. L’obiettivo è fornire una panoramica chiara e concisa degli argomenti trattati e dei punti chiave, consolidando le conoscenze acquisite.
 
 - [Elaborato A Completato](./Fase1ISS25-BertozziPietro.pdf)
-- [Elaborato B Non Completato](./Fase2ISS25-BertozziPietro.pdf)
+- [Elaborato A Autovalutato](./Fase1ISS25-BertozziPietro-Autovalutato.pdf)
+- [Elaborato B Completato](./Fase2ISS25-BertozziPietro.pdf)
 - [Elaborato C Non Completato](./Fase3ISS25-BertozziPietro.pdf)
 
 ## I Diari di Bordo
