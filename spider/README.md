@@ -4,6 +4,12 @@
 | ------------- | ----------------------------------------- |
 | **Soluzione** | **Usiamo un Ragno per non perderci**      |
 
+### Storia e Progresso
+
+Purtroppo lo spider e stato usato solo per poche settimane.  
+L'intelligenza artificiale lo superato e reso obloseto.  
+Il prodotto in questione è [notebooklm](https://notebooklm.google.com/) di Google.
+
 ### Creare un ambiente virtuale
 
 Crea un ambiente virtuale chiamato "spider". Questo comando creerà una cartella con l'ambiente virtuale nella directory corrente.
