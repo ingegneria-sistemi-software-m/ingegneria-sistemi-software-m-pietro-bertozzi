@@ -9,6 +9,7 @@ Nei file denominati `Fase<n>ISS25-BertozziPietro.html`, verranno esplorati e app
 - [Elaborato A Completato](./Fase1ISS25-BertozziPietro.pdf)
 - [Elaborato A Autovalutato](./Fase1ISS25-BertozziPietro-Autovalutato.pdf)
 - [Elaborato B Completato](./Fase2ISS25-BertozziPietro.pdf)
+- [Elaborato B Autovalutato](./Fase2ISS25-BertozziPietro-Autovalutato.pdf)
 - [Elaborato C Non Completato](./Fase3ISS25-BertozziPietro.pdf)
 
 ## I Diari di Bordo
